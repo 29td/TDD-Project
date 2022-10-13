@@ -4,7 +4,7 @@ class Solver
   end
 
   def factorial(num)
-    return 'Please enter a positive number' unless num >= 0
+    raise 'Please enter a positive number' unless num >= 0
 
     result = 1
     (1..num).each do |i|

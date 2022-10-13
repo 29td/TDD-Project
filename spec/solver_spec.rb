@@ -18,7 +18,7 @@ describe Solver do
       expect(@solver.factorial(0)).to eql(1)
     end
     it 'should return error message' do
-      expect(@solver.factorial(-5)).to eql('Please enter a positive number')
+      expect { @solver.factorial(-5) }.to raise_error(RuntimeError, 'Please enter a positive number')
     end
   end
   describe '#reverse' do
