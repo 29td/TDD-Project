@@ -1,17 +1,16 @@
 class Solver
-
-    def factorial(n)
-      raise "Please enter a positive number" if n < 0
-      result = 1
-      (1..n).each do |i|
-        result *= i
-        end
-      return result 
-    end
+  def reverse_string(string)
+    string.reverse
   end
 
-  def reverse(string)
-    string.reverse
+  def factorial(num)
+    raise 'Please enter a positive number' if num.negative?
+
+    result = 1
+    (1..num).each do |i|
+      result *= i
+    end
+    result
   end
 
   def fizzbuzz(num)
@@ -25,6 +24,7 @@ class Solver
                   'buzz,'
                 else
                   "#{i},"
+
                 end
     end
     result
