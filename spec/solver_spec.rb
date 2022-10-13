@@ -14,6 +14,12 @@ describe Solver do
     it 'should receive a method factorial and return factorial of n' do
       expect(@solver.factorial(5)).to eql(120)
     end
+    it 'should return 1 on 0 is given' do
+      expect(@solver.factorial(0)).to eql(1)
+    end
+    it 'should return error message' do
+      expect(@solver.factorial(-5)).to eql('Please enter a positive number')
+    end
   end
   describe '#reverse' do
     it 'should receive a string and return reveresed string' do
